@@ -1,20 +1,24 @@
 #include "HumanPlayer.h"
-
+#include <iostream>
 
 char HumanPlayer::Symbol() const{
 
   return player;
 
-
-  /* DONE?
-  Symbol()
-  This function is of course the override for the interface. It should simply
-  return the char that you stored when your constructor was called.*/
-
 }
 
-char HumanPlayer::TakeTurn(const std::vector<BoardPosition>& Board_position) {
+BoardPosition HumanPlayer::TakeTurn(const std::vector<BoardPosition>& Board_position) {
 
+
+  for (auto a : Board_position){
+
+    std::cout << static_cast<int>(a) << '\n';
+
+  }
+
+  std::cout << "Your move Friendo....:" << '\n';
+  std::cin >> move;
+  //Board_position.emplace_back(move);
 
 
 /*

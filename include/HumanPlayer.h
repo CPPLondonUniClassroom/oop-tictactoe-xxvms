@@ -5,11 +5,12 @@
 class HumanPlayer : public IPlayer{
 private:
     char player{};
+    int move{};
 
 public:
   HumanPlayer(const char playerXO): player(playerXO){}
   char Symbol() const override;
-  char TakeTurn(const std::vector<BoardPosition> &Board_position) override;
+  BoardPosition TakeTurn(const std::vector<BoardPosition> &Board_position) override;
 
 };
 

@@ -1,9 +1,15 @@
 #pragma once
-
+#include "HumanPlayer.h"
+#include "Renderer.h"
 
 class Controller {
 
+    HumanPlayer player1{'O'}, player2{'X'}; // Creating players
+    Renderer renderer;
+public:
+    Controller(HumanPlayer& Player1, HumanPlayer Player2, Renderer renderer): player1(Player1), player2(player2){}
 
+    void PlayGame();
 
 };
 

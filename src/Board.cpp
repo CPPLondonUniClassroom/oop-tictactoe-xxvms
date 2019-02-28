@@ -1,18 +1,21 @@
 #include "Board.h"
+#include <iostream>
 
 const std::vector<BoardPosition> Board::FreePosition() const{
 
+  std::vector<BoardPosition> local_copy = myBoard;
 
+  //todo how to check if position is free?
 
+  return local_copy;
+  /*
+      FreePositions()
+      This function should be const accessible. It should return a std::vector
+     of BoardPosition elements.
 
-
-
-/*
-    FreePositions()
-    This function should be const accessible. It should return a std::vector of BoardPosition elements.
-
-    It should return only the elements that are currently unoccupied. This function must not result in any change
-    to class data members (making it const accessible will prevent accidentally doing this)*/
+      It should return only the elements that are currently unoccupied. This
+     function must not result in any change to class data members (making it
+     const accessible will prevent accidentally doing this)*/
 
 }
 void Board::OccupyPosition(const BoardPosition& boardPosition, const IPlayer& iPlayer){

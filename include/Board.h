@@ -7,8 +7,11 @@ class Board {
 private:
 
   std::vector<char> b_char{};
+  std::vector<BoardPosition>myBoard{};
+
 
 public:
+    Board() : b_char('0'){}
 
     const std::vector<BoardPosition> FreePosition() const; //Todo returns positions that are unoccupied! I need to think what would be the best return type!!!
     void OccupyPosition(const BoardPosition& boardPosition, const IPlayer& iPlayer);
