@@ -1,6 +1,8 @@
 #pragma once
 
 #include "interface/IPlayer.h"
+#include <iostream>
+// todo IF I add here #include "Board.h" I get error that HumanPlayer is not a type
 
 class HumanPlayer : public IPlayer{
 private:
@@ -10,7 +12,7 @@ private:
 public:
   HumanPlayer(const char playerXO): player(playerXO){}
   char Symbol() const override;
-  BoardPosition TakeTurn(const std::vector<BoardPosition> &Board_position) override;
+  BoardPosition TakeTurn(const BoardPosition& board_position) override;
 
 };
 

@@ -1,5 +1,4 @@
 #include "HumanPlayer.h"
-#include <iostream>
 
 char HumanPlayer::Symbol() const{
 
@@ -7,18 +6,8 @@ char HumanPlayer::Symbol() const{
 
 }
 
-BoardPosition HumanPlayer::TakeTurn(const std::vector<BoardPosition>& Board_position) {
+BoardPosition HumanPlayer::TakeTurn(const BoardPosition& board_position) {
 
-
-  for (auto a : Board_position){
-
-    std::cout << static_cast<int>(a) << '\n';
-
-  }
-
-  std::cout << "Your move Friendo....:" << '\n';
-  std::cin >> move;
-  //Board_position.emplace_back(move);
 
 
 /*
