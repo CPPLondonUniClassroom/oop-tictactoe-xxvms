@@ -154,6 +154,26 @@ SCENARIO("Occupy Positions on the board for Player2") {
   }
 }
 
+SCENARIO("Testing user input"){
+    GIVEN("Default board is created, Player1 and Renderer"){
+        Board board{};
+        HumanPlayer Player1{'X'};
+        Renderer renderer{};
+        auto EnumTL = BoardPosition::TOP_LEFT;
+
+        THEN("use Human Player to execute this"){
+
+            Player1.TakeTurn(EnumTL);
+
+            THEN("Render the board"){
+
+                renderer.RenderBoard(board.CurrentState());
+
+            }
+        }
+
+    }
+}
 
 /*
 main()

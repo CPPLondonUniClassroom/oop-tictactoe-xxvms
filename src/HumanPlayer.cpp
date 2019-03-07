@@ -1,4 +1,5 @@
 #include "HumanPlayer.h"
+#include "Board.h" //todo that does not make sense!!!
 
 char HumanPlayer::Symbol() const{
 
@@ -7,6 +8,12 @@ char HumanPlayer::Symbol() const{
 }
 
 BoardPosition HumanPlayer::TakeTurn(const BoardPosition& board_position) {
+
+  //board.OccupyPosition(EnumBR, Player2);
+  Board board{}; // todo this would be local board!! not my board
+  board.CurrentState();
+  board.OccupyPosition(BoardPosition::TOP_RIGHT, HumanPlayer('X'));
+
 
 
 
