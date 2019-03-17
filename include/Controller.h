@@ -1,19 +1,22 @@
 #pragma once
 #include "Renderer.h"
 #include "Board.h"
-#include "HumanPlayer.h"
+#include "interface/IPlayer.h"
 
 class Controller {
-
-    HumanPlayer player1{'O'}, player2{'X'}; // Creating players
+private:
+    IPlayer &player1, &player2; // Creating players
     Renderer renderer;
     int choice = 20;
-    Board board{};
+    Board &board_A;
+    bool no_victory = true;
+    bool p1 = true;
 
 public:
-    Controller(HumanPlayer& Player1, HumanPlayer Player2, Renderer renderer): player1(Player1), player2(player2){}
+    Controller(IPlayer& Player1, IPlayer& Player2, Renderer renderer, Board& board): player1(Player1), player2(Player2), board_A(board){}
 
     void PlayGame();
+    void victory(const IPlayer& iPlayer);
 
 };
 

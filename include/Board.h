@@ -1,6 +1,5 @@
 #pragma once
 #include "BoardPosition.h"
-#include "HumanPlayer.h"
 #include "interface/IPlayer.h"
 #include <vector>
 #include <iostream>
@@ -11,12 +10,12 @@
 class Board {
 private:
 
-  std::vector<char> b_char{0,0,0,0,0,0,0,0,0};
+  std::vector<char> b_char{'0','1','2','3','4','5','6','7','8'};
 
 public:
 
     const std::vector<BoardPosition> FreePosition() const; //Todo returns positions that are unoccupied! I need to think what would be the best return type!!!
-    void OccupyPosition(const BoardPosition &boardPosition, const HumanPlayer &humanPlayer);
+    void OccupyPosition(const BoardPosition &boardPosition, const IPlayer &humanPlayer);
     std::vector<char> CurrentState()const;
 
 };

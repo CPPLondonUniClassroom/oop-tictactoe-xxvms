@@ -7,12 +7,19 @@ char HumanPlayer::Symbol() const{
 
 }
 
-BoardPosition HumanPlayer::TakeTurn(const BoardPosition& board_position) {
+BoardPosition HumanPlayer::TakeTurn(const std::vector<BoardPosition>& free_position) {
 
-  //board.OccupyPosition(EnumBR, Player2);
-  Board board{}; // todo this would be local board!! not my board
-  board.CurrentState();
-  board.OccupyPosition(BoardPosition::TOP_RIGHT, HumanPlayer('X'));
+  // print list of free position Controler will give this
+  // return position picked by user
+  //board.OccupyPosition(EnumBR, Player2)
+  //;
+  for (auto a: free_position){
+
+    std::cout << static_cast<int>(a) << '\n';
+    std::cout << " Balh\n";
+
+  }
+
 
 
 

@@ -3,9 +3,9 @@
 #include <vector>
 
 class IPlayer{
-
+public:
     virtual char Symbol() const = 0;
-    virtual BoardPosition TakeTurn(const BoardPosition& boardPosition) = 0;
+    virtual BoardPosition TakeTurn(const std::vector<BoardPosition>& boardPosition) = 0;
 };
 
 /*
